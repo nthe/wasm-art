@@ -1,0 +1,45 @@
+
+div#arc-maze {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+div#arc-maze > * {
+  width: calc(100% / 16);
+  height: calc(100% / 16);
+  border: 1px solid #424242;
+  /* border-top: 18.75px solid transparent; */
+  /* border-bottom: 18.75px solid transparent; */
+  /* border-radius: 12.5%; */
+  box-sizing: border-box;
+  transition: all 1s linear;
+}
+
+.right {
+  transform: rotate(0deg);
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-right-width: 0;
+}
+
+.left {
+  transform: rotate(180deg);
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-left: none;
+}
+
+.down {
+  transform: rotate(90deg);
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom: none;
+}
+
+.up {
+  transform: rotate(270deg);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top: none;
+}
