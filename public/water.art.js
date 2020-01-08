@@ -1,4 +1,4 @@
-let cx, cy, xoff, yoff, zoff;
+let cx, cy, parent, xoff, yoff, zoff;
 let autorun = true;
 
 
@@ -9,8 +9,9 @@ let pv3 = 0;
 let pv4 = 0;
 
 function setup() {
-  let cnv = createCanvas(600, 600, P2D);
-  cnv.parent(document.getElementById("water"));
+  parent = document.getElementById("water");
+  let cnv = createCanvas(parent.offsetWidth, parent.offsetHeight, P2D);
+  cnv.parent(parent);
   zoff = 0.0;
   cx = width / 2;
   cy = height / 2;
@@ -18,6 +19,10 @@ function setup() {
   pv2 = createVector(5.2, 1.3);
   pv3 = createVector(1.7, 9.2);
   pv4 = createVector(8.3, 2.8);
+}
+
+function windowResized() {
+  resizeCanvas(parent.offsetWidth, parent.offsetHeight);
 }
 
 function draw() {
