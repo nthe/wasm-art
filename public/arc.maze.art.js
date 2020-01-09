@@ -9,11 +9,17 @@
       0: 'left',
       1: 'down',
       2: 'right',
-      3: 'up'
-    }[getRandom(8)]
+      3: 'up',
+      4: 'left right',
+      5: 'up down',
+      6: 'left down',
+      7: 'up right',
+      8: 'up left down right',
+      9: 'accent'
+    }[getRandom(12)]
   }
 
-  let side = 24;
+  let side = 16;
 
   let todo = side * side;
   while(todo--) {

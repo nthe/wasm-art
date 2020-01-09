@@ -56,7 +56,8 @@ canvas, div.sketch {
   }
 }
 
-canvas:hover {
+canvas:hover,
+div.sketch:hover {
   box-shadow: 0 0 32px #222;
   transform: scale(1.025);
 }

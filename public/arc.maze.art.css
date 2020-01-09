@@ -3,11 +3,13 @@ div#arc-maze {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  border: 12px solid #252525;
+  box-sizing: border-box;
 }
 
 div#arc-maze > * {
-  width: calc(100% / 24);
-  height: calc(100% / 24);
+  width: calc(100% / 16);
+  height: calc(100% / 16);
   box-sizing: border-box;
   transition: all 1s linear;
   transform: scale(0.8);
@@ -31,4 +33,12 @@ div#arc-maze > * {
 .up {
   background-color: #4C566A;
   border-bottom-left-radius: 100%;
+}
+
+div#arc-maze > .accent {
+  transform: scale(0.5);
+  background-color: #fc1;
+  box-shadow: 0 0 16px #fc1;
+  opacity: .7;
+  border-radius: 50%;
 }

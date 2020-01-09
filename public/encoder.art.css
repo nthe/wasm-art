@@ -1,0 +1,32 @@
+div#encoder {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border: 12px solid #252525;
+  box-sizing: border-box;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  position: absolute;
+  left: 5vw;
+  top: 100px;
+  width: 8px;
+  height: 32px;
+  background-color: #275;
+  animation: blink 1s ease-in-out infinite;
+}
